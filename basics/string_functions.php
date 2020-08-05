@@ -1,0 +1,67 @@
+<?php
+
+
+  //substr() = part of string
+
+  $output = substr('Hello', 1, 3);
+  $output = substr('Hello', -2);
+  echo $output;
+
+
+  //strlen = length of string
+
+  $output = strlen('Hello World');
+  echo $output;
+
+
+  //strpos() = finds the position of FIRST occurance argument
+  //strrpos() = finds the position of LAST occurance argument
+
+  $output = strpos('Hello World', 'o');
+  echo $output;
+
+
+  //trim() = removes white space
+
+  $text = 'Hello         ';
+  $trim = trim($text);
+  var_dump($trim);
+
+
+  //strtoupper() and strtolower()
+
+  //ucwords() = caps first letter each word
+
+
+  //str_replace() = replace the string
+
+  $text = 'Hello World';
+  $output = str_replace('World', 'David', $text);
+  echo $output;
+
+
+  //is_string() = true or false, 1/0
+
+  $val = 'Hello';
+  $output = is_string($val);
+  echo $output;
+
+  $values = [true, false, null, 'abc', 33, '33', 22.4, '22.4', '', ' ', 0, '0'];
+
+  foreach($values as $value){
+    if(is_string($value)){
+      echo "{$value} is a string<br>";
+    }
+  }
+
+  //gzcompress() = compresses the string
+
+   $string = 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).';
+
+   $output = gzcompress($string);
+   //echo $output;
+   $uncompressed = gzuncompress($output);
+   echo $uncompressed;
+
+
+?>
